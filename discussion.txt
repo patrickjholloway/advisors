@@ -29,3 +29,4 @@ Q: Write an initial development plan that outlines a breakdown of the steps nece
 - Create the list view
 - Create Filter modal interface, if these all work the same way we may be able to reuse a single component
 - Add the state management neccesary to have the filters applied
+- Write integration tests for loading page and interacting with filters
