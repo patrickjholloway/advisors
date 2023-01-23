@@ -1,1 +1,31 @@
-<Please replace with your discussion responses>
+Q: Overall, provide your response, questions, and guidance to your colleagues.
+
+A: Hi there,
+
+The designs look great. I have few questions and feedback items:
+
+- We should probably have a button to include a way to reset all filters. I would consider this to be required for an MVP.
+- Right now we have 100 advisors, but we may have many more in the future. I think it would be beneficial for
+performance to have pagination or infinite scrolling down the road when we have many more.
+- Can we get a design for how this page should look on a smaller mobile device? A horizontal list view would probably be
+more appropriate if we have to scale it down.
+
+Q: What additional information is needed to begin implementation?
+
+- Are there designs for the filter chips when they have filters active?
+- Should we have pagination, free text search or sorting? (sort or group by location for example).
+I think for v1 we should be okay without any of these.
+- What should the reset filters button look like?
+- Should there be a summary of active filters without opening the modals for each individual filter?
+- Should the location and specialties filters reuse the checkbox design that is in the Figma for Certifications?
+- What should the loading state look like?
+- What should this page look like when there are no results?
+- If the page refreshes should the filters remain in place?
+
+Q: Write an initial development plan that outlines a breakdown of the steps necessary to complete this feature.
+
+- Write code to fetch the data we are presenting
+- Create the component for the Advisor Cards
+- Create the list view
+- Create Filter modal interface, if these all work the same way we may be able to reuse a single component
+- Add the state management neccesary to have the filters applied
