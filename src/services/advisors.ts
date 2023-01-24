@@ -4,7 +4,7 @@ export interface Advisor {
   id: string;
   name: string;
   location: string;
-  specialties: string[];
+  specialties?: string[];
   certification: string;
   avatar_url: string;
 }

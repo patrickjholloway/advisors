@@ -5,7 +5,8 @@ import AvatarSvg from "./avatar.svg";
 import { FiMapPin } from 'react-icons/fi'
 
 const useStyles = createStyles({
-    card: {width: '310px', height: '310px', padding: '30px'}
+    card: { width: '310px', height: '310px', padding: '30px' },
+    badgeIcon: { marginRight: '5px' }
 })
 
 const AdvisorCard: FC<{ advisor: Advisor }> = ({ advisor }) => {
@@ -13,13 +14,13 @@ const AdvisorCard: FC<{ advisor: Advisor }> = ({ advisor }) => {
     return <Card withBorder className={classes.card}>
         <Avatar src={AvatarSvg}></Avatar>
         <div>
-            <Title order={2}>{advisor.name}</Title>
+            <Title order={2}>{advisor.name || '(Advisor)'}</Title>
             <Text>{advisor.certification}</Text>
-            <Badge color={'green'}><FiMapPin css={{marginRight: '5px'}}/>{advisor.location}</Badge>
+            <Badge color={'green'}><FiMapPin className={classes.badgeIcon}/>{advisor.location}</Badge>
         </div>
         <Space h="md" />
         <Title order={4}>Specialty</Title>
-        <Text>{advisor.specialties.join(', ')}</Text>
+        <Text>{advisor.specialties?.join(', ')}</Text>
     </Card>
 }
 
