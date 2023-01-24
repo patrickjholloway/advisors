@@ -6,7 +6,7 @@ export interface Advisor {
   location: string;
   specialties: string[];
   certification: string;
-  avatarUrl: string;
+  avatar_url: string;
 }
 
 // Define a service using a base URL and expected endpoints

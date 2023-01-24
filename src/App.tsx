@@ -1,6 +1,6 @@
-import "./App.css";
-import React from 'react';
 import { Provider } from "react-redux";
+import { AppShell } from '@mantine/core' 
+import { MantineProvider } from '@mantine/core';
 
 import store from "./services/store";
 import Advisors from "./Advisors";
@@ -8,9 +8,11 @@ import Advisors from "./Advisors";
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        <Advisors></Advisors>
-      </div>
+      <MantineProvider withGlobalStyles withNormalizeCSS>
+        <AppShell padding="md">
+          <Advisors></Advisors>
+        </AppShell>
+      </MantineProvider>
     </Provider>
   );
 }
