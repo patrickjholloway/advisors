@@ -48,3 +48,15 @@ We also may not want to use Mantine so much going forward if we don't agree on i
 Q: Write a brief summary of what you would do next if you had more time.
 
 I would work on getting the filters implemented.
+
+--- Ammendment
+
+I implemented the filters. I noticed after I did that there is an apply button on each modal.
+I think that would be a good approach since we would probably want the filtering happening on the backend if we can.
+
+I also didn't use redux for the state of the filters since that has a lot more to do with component state than it does with some global state.
+I think if the backend supported filtering we might want to move that into the query API for advisors
+endpoint and it might reduce the complexity of the component.
+
+We could also have the options available via the backend as well. If we were doing pagination we couldn't rely on this client-side aggregation either.
+This would also reduce the complexity of the component significantly.
