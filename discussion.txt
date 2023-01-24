@@ -30,3 +30,21 @@ Q: Write an initial development plan that outlines a breakdown of the steps nece
 - Create Filter modal interface, if these all work the same way we may be able to reuse a single component
 - Add the state management neccesary to have the filters applied
 - Write integration tests for loading page and interacting with filters
+
+----
+
+Q: If you were submitting this work as an actual PR to a production repo to be reviewed by a peer, what additional information would you communicate to them?
+
+There are some advisors in the data that don't have names. We should try to clean up that data and ask design/product what we should do when we don't have that data or if we should always be able to assume it will be present.
+
+We should consider this a first pass and perhaps ship what we have behind a feature flag until it is ready for customers.
+
+Q: Describe at least two particular limitations of your approach: What can’t it handle that we might need to address? Why did you make that choice? What are the alternatives?
+
+We should try to handle pagination and text search soon. They were not in scope for this story but may be important for usability and performance.
+
+We also may not want to use Mantine so much going forward if we don't agree on its usage as a team. We should talk to the design team to figure out what our requirements are for a component library and then discuss options as a front-end development team.
+
+Q: Write a brief summary of what you would do next if you had more time.
+
+I would work on getting the filters implemented.
