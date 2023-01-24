@@ -1,14 +1,14 @@
-import React, { FC, Fragment, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React, { FC, Fragment } from "react";
+import AdvisorCard from "./AdvisorCard";
 import {useGetAdvisorsQuery} from './services/advisors';
 
 const Advisors: FC = () => {
-    const { data, error, isLoading } = useGetAdvisorsQuery();
+    const { data } = useGetAdvisorsQuery();
     if (!data) {
         return <Fragment></Fragment>
     }
     return <div>
-        {JSON.stringify(data[0])}
+        <AdvisorCard advisor={data[0]}></AdvisorCard>
     </div>
 }
 

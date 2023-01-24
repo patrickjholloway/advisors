@@ -1,6 +1,13 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-interface Advisor {}
+export interface Advisor {
+  id: string;
+  name: string;
+  location: string;
+  specialties: string[];
+  certification: string;
+  avatarUrl: string;
+}
 
 // Define a service using a base URL and expected endpoints
 export const advisorApi = createApi({
